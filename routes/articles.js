@@ -10,6 +10,7 @@ router.get("/:id", async (req, res) => {
   const article = Article.findById(req.params.id);
   if (article == null) res.redirect('/');
   res.render("articles/show", { article: article });
+  console.log("cheat");
 });
 router.post("/", async (req, res) => {
   let article = new Article({
